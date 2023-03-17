@@ -4,10 +4,9 @@ import Character from "./character";
 
 interface CharacterContainerProps {
   characters: Array<DisneyCharacter>;
-	updateFavourites: (favourites: Array<number>) => void;
 }
 
-const CharacterContainer: React.FC<CharacterContainerProps> = ({characters, updateFavourites }) => {
+const CharacterContainer: React.FC<CharacterContainerProps> = ({characters }) => {
 
   return (
     <div className="card-container">
@@ -15,7 +14,6 @@ const CharacterContainer: React.FC<CharacterContainerProps> = ({characters, upda
         <Character 
                 key={character._id}
                 character={character}
-                updateFavourites={updateFavourites}
         />
       ))}
     </div>
